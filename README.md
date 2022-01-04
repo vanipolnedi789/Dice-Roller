@@ -12,3 +12,5 @@ Go packages used to solve this problem:
 
 To Run the project :
  - go run main.go
+ - currently package is using internal source for random number generation.
+ - To use http api for random number generation , change **randomGenerator** variable datatype to **httpRandNumGeneratorSource**
