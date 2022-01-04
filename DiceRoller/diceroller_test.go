@@ -9,6 +9,7 @@ func Test_roll(t *testing.T) {
 	type args struct {
 		rollsCount int
 		diceSize   int
+		randomGenerator internalRandNumGeneratorSource
 	}
 	tests := []struct {
 		name string
@@ -24,7 +25,7 @@ func Test_roll(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			roll(tt.args.rollsCount, tt.args.diceSize)
+			rollIndividualDice(tt.args.randomGenerator,tt.args.rollsCount, tt.args.diceSize)
 		})
 	}
 }
